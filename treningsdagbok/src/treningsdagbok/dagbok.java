@@ -50,9 +50,6 @@ public class dagbok {
 				case "lesLogg":
 					//kjør metode for å se logg
 					break;
-				case "connect":
-					driver.connect();
-					break;
 				case "exit":
 					in.close();
 					return;

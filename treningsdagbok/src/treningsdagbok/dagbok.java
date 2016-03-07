@@ -3,13 +3,14 @@ package treningsdagbok;
 import java.util.Scanner;
 
 public class dagbok {
-	private Driver driver;
-	void init() {
+	private static Driver driver;
+	static void init() {
 		driver = new Driver();
 	}
 	
-	void run() {
+	static void run() {
 		Scanner in = new Scanner(System.in);
+		driver.connect();
 		
 		while(true) {
 			System.out.println("> ");
@@ -40,14 +41,17 @@ public class dagbok {
 				case "resultatDifferanse":
 					//kjør metode for å se differanse mellom resultat og beste
 					break;
-				case "lagMal":
-					//kjør metode for å lage mal
+				case "seMal":
+					driver.seMal();
 					break;
 				case "sammenlignFormResultat":
 					//kjør metode for å sammenligne form og resultat
 					break;
 				case "lesLogg":
 					//kjør metode for å se logg
+					break;
+				case "connect":
+					driver.connect();
 					break;
 				case "exit":
 					in.close();
@@ -60,8 +64,8 @@ public class dagbok {
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		init();
+		run();
 	}
 
 }

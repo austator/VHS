@@ -6,18 +6,31 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 
 public class Driver {
-
-	public static void main(String[] args) {
-
+	Statement myStmt;
+	
+	public void connect() {
 		String password = "";
 		String username = "root";
 		String URL = "jdbc:mysql://localhost:3306/mydb?autoReconnect=true&useSSL=false";
+		
+		
 		
 		try {
 			//get a connection to database
 			Connection myConn = DriverManager.getConnection(URL, username, password);
 			// create a statement 
-			Statement myStmt = myConn.createStatement();
+			myStmt = myConn.createStatement();
+			
+			
+		}
+		catch(Exception exc)
+		{
+			exc.printStackTrace();
+		}
+	}
+	
+	public void seMal() {
+		try {
 			// execute SQL query
 			ResultSet myRs = myStmt.executeQuery("select * from mal;");  
 			//process the result set
@@ -25,10 +38,10 @@ public class Driver {
 				System.out.println(myRs.getString("navn"));
 			}
 		}
-		catch(Exception exc)
-		{
+		catch(Exception exc) {
 			exc.printStackTrace();
 		}
+
 	}
 
 }

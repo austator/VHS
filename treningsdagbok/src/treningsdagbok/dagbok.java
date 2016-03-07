@@ -21,16 +21,18 @@ public class dagbok {
 					//kj�r ny �kt metode
 					break;
 				case "okter":
-					//kj�re se okter metode
+					//kj�re se okter metodeseleg
 					break;
 				case "leggTilOvelse":
 					String ovelseNavn = line[1];
 					String ovelseBeskrivelse = "";
 					if(line.length > 2) {
 						for(int i = 2; i < line.length; i++) {
-							ovelseBeskrivelse += line[i];
+							ovelseBeskrivelse += line[i]+ " ";
 						}
 					}
+					System.out.println(ovelseNavn);
+					System.out.println(ovelseBeskrivelse);
 					driver.leggTilOvelse(ovelseNavn, ovelseBeskrivelse);
 					//kj�r legg til �velse metode
 					break;

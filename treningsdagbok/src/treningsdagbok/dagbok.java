@@ -24,6 +24,14 @@ public class dagbok {
 					//kjøre se okter metode
 					break;
 				case "leggTilOvelse":
+					String ovelseNavn = line[1];
+					String ovelseBeskrivelse = "";
+					if(line.length > 2) {
+						for(int i = 2; i < line.length; i++) {
+							ovelseBeskrivelse += line[i];
+						}
+					}
+					driver.leggTilOvelse(ovelseNavn, ovelseBeskrivelse);
 					//kjør legg til øvelse metode
 					break;
 				case "leggTilOktOvelse":

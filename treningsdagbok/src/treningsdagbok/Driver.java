@@ -11,7 +11,7 @@ public class Driver {
 
 		String password = "";
 		String username = "root";
-		String URL = "jdbc:mysql://localhost:3306/mydb";
+		String URL = "jdbc:mysql://localhost:3306/mydb?autoReconnect=true&useSSL=false";
 		
 		try {
 			//get a connection to database
@@ -19,10 +19,10 @@ public class Driver {
 			// create a statement 
 			Statement myStmt = myConn.createStatement();
 			// execute SQL query
-			ResultSet myRs = myStmt.executeQuery("select * from kondis;");  
+			ResultSet myRs = myStmt.executeQuery("select * from mal;");  
 			//process the result set
 			while (myRs.next()){
-				System.out.println(myRs.getString("belastning"));
+				System.out.println(myRs.getString("navn"));
 			}
 		}
 		catch(Exception exc)

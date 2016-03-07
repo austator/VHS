@@ -4,3 +4,4 @@ treningsdagbok/.gitignore
 treningsdagbok/.project
 treningsdagbok/.settings/org.eclipse.jdt.core.prefs
 .recommenders/
+*.class

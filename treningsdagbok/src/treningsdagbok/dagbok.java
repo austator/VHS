@@ -26,6 +26,8 @@ public class dagbok {
 				case "leggTilOvelse":
 					//kjør legg til øvelse metode
 					break;
+				case "leggTilOktOvelse":
+					// kjør legg til øktøvelse metode
 				case "seMaal":
 					//kjør se mål metode
 					break;

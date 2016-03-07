@@ -72,11 +72,12 @@ public class Driver {
 	}
 	
 	public void leggTilOvelse(String navn, String beskrivelse){
-		PreparedStatement test = null;
 		
 		try {
 			String ovelsequery = String.format("INSERT INTO ovelse (ovelseid, navn, beskrivelse) VALUES (1, %s, %s)",navn,beskrivelse);
-			test.executeQuery(ovelsequery);
+			Statement test = myConn.createStatement();
+			test.executeUpdate(ovelsequery);
+
 		}
 		catch(Exception exc) {
 			exc.printStackTrace();

@@ -74,7 +74,7 @@ public class Driver {
 	public void leggTilOvelse(String navn, String beskrivelse){
 		
 		try {
-			String ovelsequery = String.format("INSERT INTO ovelse (ovelseid, navn, beskrivelse) VALUES (2, '%s', '%s')",navn,beskrivelse);
+			String ovelsequery = String.format("INSERT INTO ovelse (navn, beskrivelse) VALUES ('%s', '%s')",navn,beskrivelse);
 			Statement test = myConn.createStatement();
 			test.executeUpdate(ovelsequery);
 

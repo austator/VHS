@@ -18,10 +18,10 @@ public class dagbok {
 			
 			switch(line[0]) {
 				case "nyOkt":
-					//kjør ny økt metode
+					//kjï¿½r ny ï¿½kt metode
 					break;
 				case "okter":
-					//kjøre se okter metode
+					//kjï¿½re se okter metode
 					break;
 				case "leggTilOvelse":
 					String ovelseNavn = line[1];
@@ -32,33 +32,33 @@ public class dagbok {
 						}
 					}
 					driver.leggTilOvelse(ovelseNavn, ovelseBeskrivelse);
-					//kjør legg til øvelse metode
+					//kjï¿½r legg til ï¿½velse metode
 					break;
 				case "leggTilOktOvelse":
-					// kjør legg til øktøvelse metode
+					// kjï¿½r legg til ï¿½ktï¿½velse metode
 				case "seMaal":
-					//kjør se mål metode
+					//kjï¿½r se mï¿½l metode
 					break;
 				case "settMaal":
-					//kjør settMaal metode
+					//kjï¿½r settMaal metode
 					break;
 				case "seResultater":
-					//kjør se resultat metode
+					//kjï¿½r se resultat metode
 					break;
 				case "seProgresjon":
-					//kjør metode for å se progresjon
+					//kjï¿½r metode for ï¿½ se progresjon
 					break;
 				case "resultatDifferanse":
-					//kjør metode for å se differanse mellom resultat og beste
+					//kjï¿½r metode for ï¿½ se differanse mellom resultat og beste
 					break;
 				case "seMal":
 					driver.seMal();
 					break;
 				case "sammenlignFormResultat":
-					//kjør metode for å sammenligne form og resultat
+					//kjï¿½r metode for ï¿½ sammenligne form og resultat
 					break;
 				case "lesLogg":
-					//kjør metode for å se logg
+					//kjï¿½r metode for ï¿½ se logg
 					break;
 				case "exit":
 					in.close();

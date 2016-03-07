@@ -11,7 +11,7 @@ public class Driver {
 
 		String password = "";
 		String username = "root";
-		String URL = "jdbc:mysql://localhost:3306/mydb";
+		String URL = "jdbc:mysql://localhost:3306/mydb?autoReconnect=true&useSSL=false";
 		
 		try {
 			//get a connection to database

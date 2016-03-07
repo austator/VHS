@@ -14,26 +14,26 @@ public class Driver {
 	String URL;
 	Connection myConn;
 	
-	public Driver() {
-		password = "";
-		username = "root";
-		URL = "jdbc:mysql://localhost:3306/mydb?autoReconnect=true&useSSL=false";
-
-		
-		
-		try {
-			//get a connection to database
-			myConn = DriverManager.getConnection(URL, username, password);
-			// create a statement 
-			myStmt = myConn.createStatement();
-			
-			
-		}
-		catch(Exception exc)
-		{
-			exc.printStackTrace();
-		}
-	}
+//	public Driver() {
+//		password = "";
+//		username = "root";
+//		URL = "jdbc:mysql://localhost:3306/mydb?autoReconnect=true&useSSL=false";
+//
+//		
+//		
+//		try {
+//			//get a connection to database
+//			myConn = DriverManager.getConnection(URL, username, password);
+//			// create a statement 
+//			myStmt = myConn.createStatement();
+//			
+//			
+//		}
+//		catch(Exception exc)
+//		{
+//			exc.printStackTrace();
+//		}
+//	}
 	public void connect(){
 		password = "";
 		username = "root";
@@ -72,11 +72,11 @@ public class Driver {
 	}
 	
 	public void leggTilOvelse(String navn, String beskrivelse){
-		PreparedStatement test = null;
 		
 		try {
-			String ovelsequery = String.format("INSERT INTO ovelse (ovelseid, navn, beskrivelse) VALUES (1, %s, %s)",navn,beskrivelse);
-			test.executeQuery(ovelsequery);
+			String ovelsequery = String.format("INSERT INTO ovelse VALUES (1, '%s', '%s')",navn,beskrivelse);
+			Statement test = myConn.createStatement();
+			test.executeUpdate(ovelsequery);
 		}
 		catch(Exception exc) {
 			exc.printStackTrace();
